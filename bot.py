@@ -81,7 +81,7 @@ PALPITES = [
         "horario": "20:50",
         "odd": "5.75",
         "gestao": "2%",
-        "imagem": "imagens/bilhete01.jpg",
+        "imagem": "bilhete01.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/8995-E1KOA9"
     },
 
@@ -125,7 +125,7 @@ async def enviar_bom_dia(bot):
 
 async def enviar_gestao(bot):
 
-    imagem = "imagens/gestao de banca.jpg"
+    imagem = "gestao de banca.jpg"
 
     if os.path.exists(imagem):
 
