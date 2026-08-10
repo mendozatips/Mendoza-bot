@@ -78,7 +78,7 @@ MENSAGEM_GESTAO = """
 PALPITES = [
 
     {
-        "horario": "22:41",
+        "horario": "22:47",
         "odd": "5.75",
         "gestao": "2%",
         "imagem": "bilhete01.jpg",
