@@ -352,60 +352,60 @@ async def rotina_diaria(bot):
                 )
 
 
-      # ====================================================
-# VERIFICAR PALPITES
-# ====================================================
+        # ====================================================
+        # VERIFICAR PALPITES
+        # ====================================================
 
-agora = datetime.now(FUSO_HORARIO)
+        agora = datetime.now(FUSO_HORARIO)
 
-if not hasattr(rotina_diaria, "enviados"):
-    rotina_diaria.enviados = set()
+        if not hasattr(
+            rotina_diaria,
+            "enviados"
+        ):
+            rotina_diaria.enviados = set()
 
-for palpite in PALPITES:
+        for palpite in PALPITES:
 
-    horario = palpite["horario"]
+            horario = palpite["horario"]
 
-    hora, minuto = map(
-        int,
-        horario.split(":")
-    )
-
-    if (
-        agora.hour == hora
-        and agora.minute == minuto
-    ):
-
-        chave = f"{hoje}_{horario}"
-
-        # ------------------------------------------------
-        # TRAVA CONTRA DUPLICAÇÃO
-        # ------------------------------------------------
-
-        if chave in rotina_diaria.enviados:
-            continue
-
-        # Marca ANTES de enviar.
-        # Isso impede que o mesmo palpite seja
-        # processado novamente no mesmo horário.
-        rotina_diaria.enviados.add(chave)
-
-        try:
-
-            await enviar_palpite(
-                bot,
-                palpite
+            hora, minuto = map(
+                int,
+                horario.split(":")
             )
 
-            print(
-                f"✅ Palpite das {horario} enviado uma única vez."
-            )
+            if (
+                agora.hour == hora
+                and agora.minute == minuto
+            ):
 
-        except Exception as erro:
+                chave = f"{hoje}_{horario}"
 
-            print(
-                f"❌ Erro no palpite {horario}: {erro}"
-            )
+                # ------------------------------------------------
+                # TRAVA CONTRA DUPLICAÇÃO
+                # ------------------------------------------------
 
+                if chave in rotina_diaria.enviados:
+                    continue
+
+                # Marca antes do envio
+                rotina_diaria.enviados.add(chave)
+
+                try:
+
+                    await enviar_palpite(
+                        bot,
+                        palpite
+                    )
+
+                    print(
+                        f"✅ Palpite das {horario} enviado uma única vez."
+                    )
+
+                except Exception as erro:
+
+                    print(
+                        f"❌ Erro no palpite {horario}: {erro}"
+                    )
 
         # ====================================================
         # LIMPAR REGISTROS ANTIGOS
