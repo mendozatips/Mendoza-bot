@@ -352,57 +352,59 @@ async def rotina_diaria(bot):
                 )
 
 
-        # ====================================================
-        # VERIFICAR PALPITES
-        # ====================================================
+      # ====================================================
+# VERIFICAR PALPITES
+# ====================================================
 
-        agora = datetime.now(FUSO_HORARIO)
+agora = datetime.now(FUSO_HORARIO)
 
-        for palpite in PALPITES:
+if not hasattr(rotina_diaria, "enviados"):
+    rotina_diaria.enviados = set()
 
-            horario = palpite["horario"]
+for palpite in PALPITES:
 
-            hora, minuto = map(
-                int,
-                horario.split(":")
+    horario = palpite["horario"]
+
+    hora, minuto = map(
+        int,
+        horario.split(":")
+    )
+
+    if (
+        agora.hour == hora
+        and agora.minute == minuto
+    ):
+
+        chave = f"{hoje}_{horario}"
+
+        # ------------------------------------------------
+        # TRAVA CONTRA DUPLICAÇÃO
+        # ------------------------------------------------
+
+        if chave in rotina_diaria.enviados:
+            continue
+
+        # Marca ANTES de enviar.
+        # Isso impede que o mesmo palpite seja
+        # processado novamente no mesmo horário.
+        rotina_diaria.enviados.add(chave)
+
+        try:
+
+            await enviar_palpite(
+                bot,
+                palpite
             )
 
-            if (
-                agora.hour == hora
-                and agora.minute == minuto
-            ):
+            print(
+                f"✅ Palpite das {horario} enviado uma única vez."
+            )
 
-                chave = (
-                    f"{hoje}_"
-                    f"{horario}"
-                )
+        except Exception as erro:
 
-                if not hasattr(
-                    rotina_diaria,
-                    "enviados"
-                ):
-
-                    rotina_diaria.enviados = set()
-
-                if chave not in rotina_diaria.enviados:
-
-                    try:
-
-                        await enviar_palpite(
-                            bot,
-                            palpite
-                        )
-
-                        rotina_diaria.enviados.add(
-                            chave
-                        )
-
-                    except Exception as erro:
-
-                        print(
-                            f"❌ Erro no palpite "
-                            f"{horario}: {erro}"
-                        )
+            print(
+                f"❌ Erro no palpite {horario}: {erro}"
+            )
 
 
         # ====================================================
