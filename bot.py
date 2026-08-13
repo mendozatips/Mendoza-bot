@@ -49,7 +49,7 @@ MENSAGEM_GESTAO = """
 # EDITE OS PALPITES AQUI
 PALPITES = [
     {
-        "horario": "17:56",
+        "horario": "18:07",
         "odd": "2.03",
         "gestao": "2%",
         "imagem": "bilhete01.jpg",
@@ -94,7 +94,7 @@ async def enviar_palpite(bot, palpite):
 ➡️ ODD - {palpite["odd"]}
 💵 GESTÃO - {palpite["gestao"]}
 
-+18 APOSTE COM RESPONSABILIDADE</b>
+🔞 APOSTE COM RESPONSABILIDADE</b>
 """
 
     teclado = None
@@ -102,7 +102,7 @@ async def enviar_palpite(bot, palpite):
 
     if link and not link.startswith("COLOQUE_"):
         botao = InlineKeyboardButton(
-            text="🎟 CLIQUE AQUI — BILHETE PRONTO",
+            text="PALPITE — ODD 2.03",
             url=link,
         )
         teclado = InlineKeyboardMarkup([[botao]])
