@@ -24,7 +24,7 @@ Vamos pra cima! 🍀⚽️</b>
 """
 
 MENSAGEM_GESTAO = """
-💰 GESTÃO DE BANCA
+<b>💰 GESTÃO DE BANCA
 
 🎯 Banca de referência: R$ 1.000,00
 
@@ -42,7 +42,7 @@ MENSAGEM_GESTAO = """
 
 🧠 Gestão é proteção. Disciplina é liberdade.
 
-🔥 Mendoza Tips
+🔥 Mendoza Tips</b>
 """
 
 
