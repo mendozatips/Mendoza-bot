@@ -12,7 +12,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 # CONFIGURAÇÃO
 # ============================================================
 
-TOKEN = "8838241901:AAH6vrjZhMXNYmThlXjaYVL9AtPN253uvdg"
+TOKEN = os.getenv("TOKEN")
 
 CHAT_ID = -1002620087512
 
