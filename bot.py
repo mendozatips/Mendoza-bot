@@ -49,7 +49,7 @@ MENSAGEM_GESTAO = """
 # EDITE OS PALPITES AQUI
 PALPITES = [
     {
-        "horario": "17:50",
+        "horario": "17:56",
         "odd": "2.03",
         "gestao": "2%",
         "imagem": "bilhete01.jpg",
@@ -88,7 +88,7 @@ async def enviar_gestao(bot):
 
 async def enviar_palpite(bot, palpite):
     texto = f"""
-<b>👑 PALPITE DO MENDOZA.TIPS 👑
+<b>👑 PALPITE DO MENDOZA • TIPS 👑
 
 🏦 SUPERBET
 ➡️ ODD - {palpite["odd"]}
