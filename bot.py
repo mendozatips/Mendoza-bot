@@ -111,11 +111,13 @@ async def enviar_gestao(bot):
                 chat_id=CHAT_ID,
                 photo=arquivo,
                 caption=MENSAGEM_GESTAO,
+                parse_mode="HTML"
             )
     else:
         await bot.send_message(
             chat_id=CHAT_ID,
             text=MENSAGEM_GESTAO,
+            parse_mode="HTML"
         )
 
     print("✅ Gestão enviada.")
