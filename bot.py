@@ -63,14 +63,14 @@ PALPITES = [
         "link": "https://superbet.bet.br/bilhete-compartilhado/891H-YK29IA",
     },
      {
-        "horario": "13:01",
+        "horario": "15:06",
         "odd": "1.66",
         "gestao": "2%",
         "imagem": "bilhete3.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/899M-ERNEGB",
     },
      {
-        "horario": "13:02",
+        "horario": "15:07",
         "odd": "1.70",
         "gestao": "2%",
         "imagem": "bilhete4.jpg",
