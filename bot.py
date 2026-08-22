@@ -49,11 +49,11 @@ MENSAGEM_GESTAO = """
 # EDITE OS PALPITES AQUI
 PALPITES = [
     {
-        "horario": "09:00",
-        "odd": "1.95",
+        "horario": "13:10",
+        "odd": "1.59",
         "gestao": "2%",
         "imagem": "bilhete1.jpg",
-        "link": "https://superbet.bet.br/bilhete-compartilhado/899W-ER6V4T",
+        "link": "https://superbet.bet.br/bilhete-compartilhado/8983-7QO09T",
     },
      {
         "horario": "06:10",
