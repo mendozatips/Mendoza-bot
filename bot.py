@@ -49,42 +49,42 @@ MENSAGEM_GESTAO = """
 # EDITE OS PALPITES AQUI
 PALPITES = [
     {
-        "horario": "08:30",
+        "horario": "22:30",
         "odd": "1.96",
         "gestao": "2%",
         "imagem": "bilhete1.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/8906-QKR7KR",
     },
      {
-        "horario": "09:00",
+        "horario": "22:00",
         "odd": "1.91",
         "gestao": "2%",
         "imagem": "bilhete2.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/890H-QHG5K0",
     },
      {
-        "horario": "09:30",
+        "horario": "22:30",
         "odd": "1.95",
         "gestao": "2%",
         "imagem": "bilhete3.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/891Z-YN3TE5",
     },
      {
-        "horario": "10:00",
+        "horario": "23:00",
         "odd": "1.90",
         "gestao": "2%",
         "imagem": "bilhete4.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/891J-YNUSHD",
     },
      {
-        "horario": "10:30",
+        "horario": "23:30",
         "odd": "1.85",
         "gestao": "2%",
         "imagem": "bilhete5.jpg",
         "link": "https://superbet.bet.br/bilhete-compartilhado/8904-QDK2MM",
     },
        {
-        "horario": "20:49",
+        "horario": "23:49",
         "odd": "150.00",
         "gestao": "0,5%",
         "imagem": "bilhete6.jpg",
